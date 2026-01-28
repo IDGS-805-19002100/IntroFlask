@@ -2,6 +2,13 @@
 
 
 {% block content %}
+{% import "_macros.html" as macros%}
+    <form action="/" method="post">
+    {{macros.datos("matricula","Matricula","number")}}
+    {{macros.datos("nombre","Nombre")}}
+    {{macros.datos("contraseña","Contraseña","password")}}
+    {{macros.datos("correo","Correo","email")}}
 
-<h1>Usuarios</h1>
+<button class="btn btn-primary" type="submit">Guardar</button>
+</form>
 {%endblock%}
